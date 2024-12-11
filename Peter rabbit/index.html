@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="form-inputs.css"/>
+    <title>The Tale of Peter Rabbit</title>
+</head>
+
+
+<body>
+
+    <nav id="hamburger-menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Characters</a></li>
+            <li><a href="#">Form</a></li>
+        </ul>
+    </nav>
+
+    <div id="burger">
+        <div id="line1"></div>
+        <div id="line2"></div>
+        <div id="line3"></div>
+    </div>
+
+    <div class="buttons">
+        <img src="images/audio.png" class="play">
+        <img src="images/mute.png" class="pause">
+    </div>
+
+    <div class="timeline">
+        <a href="#garden" class="selected"><img src="images/carrot.png"></a>
+        <a href="#chase"><img src="images/carrot.png"></a>
+        <a href="#shed"><img src="images/carrot.png"></a>
+        <a href="#escapescene"><img src="images/carrot.png"></a>
+        <a href="#sick"><img src="images/carrot.png"></a>
+    </div>
+
+    <div id="page">
+
+        <section id="homepage">
+
+            <div id="logo">
+                <img src="images/logo.png">
+            </div>
+
+            <div id="homepage-text" >
+                <h1 data-aos="fade-up">The Tale of Peter Rabbit</h1>
+                <!-- <a href="characters">Start story</a> -->
+            </div>
+
+            <div>
+                <canvas id="home-bg" width="1920" height="1080"></canvas>
+                <canvas id="home-bg-1" width="1920" height="1080"></canvas>
+                <p data-aos="fade-right">
+                    <canvas id="peter-rabbit" width="1000" height="1000"></canvas>
+                </p>
+                <img src="images/vignette.png" class="vignette" >
+
+            </div> 
+
+            <audio id="bg-music" src="media/calm-music.mp3" type="audio/mp3" preload="auto" loop muted></audio>
+
+        </section>
+
+        <section id="characters">
+
+            <h1 data-aos="fade-right">Meet the characters</h1>
+
+            <div id="slides">
+                <img src="images/peter-closeup.png" class="slideimg">
+                <img src="images/mom-closeup.png" class="slideimg">
+                <img src="images/farmer-closeup.png" class="slideimg">
+                <img src="images/vignette.png" class="vignette" >
+            </div>
+
+            <div id="captions" data-aos="fade-right">
+                <div id="char-text">
+                    <p>Peter Rabbit</p>
+                </div>
+                <div id="char-text">
+                    <p>Peter's Mom</p>
+                </div>
+                <div id="char-text">
+                    <p>Mr. McGregor</p>
+                </div>
+            </div>
+
+            <a href="#garden" class="start-button" data-aos="fade-down">Start story</a>
+
+        </section>
+
+        <div id="overflow">
+            <section id="garden">
+                <div>
+
+                    <div id="starting-story">
+                        <h2>The story begins when...</h2>
+                        <img src="images/start-bg.png" class="start-bg">
+                    </div>
+
+                    <canvas id="garden-bg" width="1920" height="1080"></canvas>
+                    <canvas id="garden-fg" width="1920" height="1080"></canvas>
+                    <div id="parallax-vegetables">
+                        <img class="veggies" id="veggies1" src="images/veggies-1.png">
+                        <img class="veggies" id="veggies2" src="images/veggies-2.png">
+                        <canvas id="garden-peter" width="1000" height="1000"></canvas>
+                        <img src="images/vignette.png" class="vignette" >
+                        <img src="images/text-shadow.png" class="text-shadow" >
+                        
+                    </div>
+                    <p data-aos="fade-up">Naughty Peter snuck into Mr. McGregor's garden while his mother went to the baker's. <br>
+                        First he ate some parsnips and french beans, and then he ate some radishes.</p>
+                </div>
+
+                
+
+            </section>
+
+
+            <section id="chase">
+
+                <div>
+                    <img src="images/chase-background.png">
+                    <img src="images/scared-peter .gif" class="scared-peter">
+                    <img src="images/angry-farmer.gif" class="angry-farmer">
+                    <canvas id="chase-fg" width="1920" height="1080"></canvas>
+                    <img src="images/vignette.png" class="vignette" >
+                    <img src="images/text-shadow.png" class="text-shadow" >
+
+                    
+                </div>
+
+                <p data-aos="fade-up">However, he stumbled across Mr. McGregor while trying to find parsley.  <br>
+                    Mr. Mcgregor jumped up and ran after Peter, waving a pitchfork and calling out, 'Stop thief!'</p>
+
+                
+                
+            </section>
+
+
+            <section id="shed">
+                <div>
+                    <canvas id="shed-bg" width="1920" height="1080"></canvas>
+                    <canvas id="farmer-shed" width="1920" height="1080"></canvas>
+                    <img src="images/shadow-layer.png">
+                    <img src="images/shed-bg.png">
+                    <canvas id="watering-can" width="1920" height="1080"></canvas>
+                    <img src="images/vignette.png" class="vignette" >
+                    <img src="images/text-shadow.png" class="text-shadow" >
+
+                    
+                </div>
+                
+                <p data-aos="fade-up">Peter rushed into the tool shed and tried to hide inside a watering can. <br>
+                    Unfortunately, it was full of cold water which caused Peter to sneeze - 'Kertyshcoo! Mr.McGregor was after him again. </p>
+
+                <audio id="music" src="media/sneeze.wav"></audio>
+
+            </section>
+
+            <section id="escapescene">
+                <div>
+                    <img src="images/escape-scene-bg.png">
+                    <canvas id="escaped-peter" width="1000" height="1000"></canvas>
+                    <img src="images/escape-scene-fences.png" class="fences">
+                    <canvas id="escape-fg" width="1920" height="1080"></canvas>
+                    <canvas id="escaping-peter" width="1000" height="1000"></canvas>
+                    <img src="images/vignette.png" class="vignette" >
+                    <img src="images/text-shadow.png" class="text-shadow" >
+
+                    <p data-aos="fade-up">The chase continued until Peter saw an opening in the fence for him to escape. <br>
+                        He slipped underneath the gate and was safe at last outside the garden. </p>
+                </div>
+                
+            </section>
+
+
+
+            <section id="sick">
+                <div> 
+                    <canvas id="bedroom-bg" width="1920" height="1080"></canvas>
+                    <canvas id="peter-resting" width="1920" height="1080"></canvas>
+                    <canvas id="mom-checking" width="1920" height="1080"></canvas>
+                    <img src="images/vignette.png" class="vignette" >
+                    <img src="images/text-shadow.png" class="text-shadow" >
+
+                    
+                </div>
+
+                <p data-aos="fade-up">Peter rushed into the tool shed and tried to hide inside a watering can. <br>
+                    Unfortunately, it was full of cold water which caused Peter to sneeze - 'Kertyshcoo! Mr.McGregor was after him again. </p>
+                
+            </section>
+            
+            <section id="form">
+                <div id="form-text">
+                    <h1 data-aos="fade-down">The End</h1>
+
+                    <h3 data-aos="fade-down">What did you think of the website?</h3>
+
+                </div>
+
+                
+
+                <div class="review-form"> 
+
+                    <!-- <h2>How would you rate your experience?</h2> -->
+
+
+                    <div class="submission">
+                        <div class="thanks">Thanks for your feedback!</div>
+                    </div>
+
+                    <div id="error">You must enter your name.</div>
+
+                    <div class="carrots">
+
+                        <input type="radio" name="rating" id="lvl-5">
+                        <label for="lvl-5" class="fa-solid fa-carrot"></label>
+
+                        <input type="radio" name="rating" id="lvl-4">
+                        <label for="lvl-4" class="fa-solid fa-carrot"></label>
+
+                        <input type="radio" name="rating" id="lvl-3">
+                        <label for="lvl-3" class="fa-solid fa-carrot"></label>
+
+                        <input type="radio" name="rating" id="lvl-2">
+                        <label for="lvl-2" class="fa-solid fa-carrot"></label>
+
+                        <input type="radio" name="rating" id="lvl-1">
+                        <label for="lvl-1" class="fa-solid fa-carrot"></label>
+
+                        <form action="#">
+
+                            <header></header>
+
+                            <p>
+                                <label for="username" id="name">Your name:</label>
+                                <input type="text" id="username" />
+                                <button id="clearButton" type="button">Clear</button>
+                            </p>
+                            
+                            <div class="textarea">
+                                <textarea cols="30" placeholder="Tell us how you felt..." maxlength="100"></textarea>
+                            </div>
+
+                            <output id="remainingOutput">100 characters left</output>
+            
+                            <div class="submit-button">
+                                <button type="submit" class="submit">SUBMIT</button>
+                            </div>
+                        </form>
+
+                    </div>
+
+                
+
+                </div>
+
+            </section>
+        </div>
+
+    </div>
+    <!-- scripts -->
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/@rive-app/canvas"></script>
+    <script src="form-inputs.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/slideshow.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

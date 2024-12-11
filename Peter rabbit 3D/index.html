@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Playpen+Sans:wght@200;300;400&family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="start-screen" >
+        <h2>The Tale of Peter Rabbit</h2>
+        <h3>Click anywhere to start</h3>
+        <img src="imagesOptimised/start-bg.png" class="start-bg">
+    </div>
+
+    <div class="time-buttons">
+        <img src="imagesOptimised/sun.png" class="day" >
+        <img src="imagesOptimised/moon.png" class="night">
+    </div>
+
+    <div class="buttons">
+        <img src="imagesOptimised/audio.png" class="play">
+        <img src="imagesOptimised/mute.png" class="pause">
+    </div>
+
+    <audio id="bg-music" src="media/bg-music.mp3" type="audio/mp3" preload="auto" loop muted></audio>
+    
+    <div class="changing-sky">
+
+    </div>
+
+    <img class="sky" src="media/sky.gif">
+
+    <img class="stars" src="media/stars.gif">
+    
+
+    <div class="character-text1">
+        <h3 class="flopsy-intro">Helloo I'm Flopsy! I love playing tag with my sister, Mopsy, but she's busy doing homework.</h3>
+    
+    </div>
+
+    <div class="character-text2">
+        <h3 class="cotton-intro">Hi there! I'm Cotton-tail, and I love eating berries. <br> Mom always gets fresh berries from the market and they are delicious</h3>
+    
+    </div>
+
+    <div class="character-text3">
+        <h3 class="peter-intro">Greetings friend! I'm Peter and welcome to our cozy little cottage. <br> Feel free to explore the surroundings and join us for a pinic!</h3>
+    </div>
+
+    <div class="character-text4">
+        <h3 class="mom-intro">Hey kiddos, supper is ready! Come in before the the food gets cold... <br> there's bread fresh out of the oven and some strawberry jam too.</h3>
+    </div>
+
+    <div class="character-text5">
+        <h3 class="mopsy-intro">Homework is so boring, I want to go out and play with my brothers! I'm Mopsy by the way hehe</h3>
+    </div>
+
+    <div class="container">
+        <div class="scene">
+
+            <div class="object char1">
+                <img class="face flopsy" src="media/Flopsy.gif" width="200px" height="200px">
+        
+            </div>
+
+            <div class="object char2">
+                <img class="face cotton-tail" src="media/Cotton-tail.gif" width="200px" height="200px">
+        
+            </div>
+
+            <div class="object char3">
+                <img class="face peter" src="media/Peter.gif" width="200px" height="200px">
+        
+            </div>
+
+            <!-- <img class="face diorama-base" src="images/diorama-base.png" /> -->
+            <div class="object diorama-base">
+                <img class="face front" src="imagesOptimised/diorama-base-sides(flipped).png" width="750px" height="50px">
+                <img class="face back" src="imagesOptimised/diorama-base-sides(flipped).png" width="750px" height="50px">
+                <img class="face left" src="imagesOptimised/diorama-base-sides.png" width="750px" height="50px">
+                <img class="face right" src="imagesOptimised/diorama-base-sides.png" width="750px" height="50px">
+                <img class="face top" src="imagesOptimised/diorama-base.png" width="750px" height="750px">
+            </div>
+
+            <div class="object house">
+                <img class="face front" src="imagesOptimised/house-front-mom.png" width="250px" height="200px">
+                <img class="face front-inside" src="media/mom-waving.gif" width="250px" height="200px">
+                <img class="face back" src="imagesOptimised/house-back.png" width="250px" height="200px">
+                <img class="face left" src="imagesOptimised/house-left.png" width="300px" height="200px">
+                <img class="face right" src="imagesOptimised/house-right-empty.png" width="300px" height="200px">
+                <!-- <img class="face window-frame" src="images/window-frame.png" width="300px" height="200px" onclick="toggleCurtains()"> -->
+                
+                
+
+                <div class="object roof">
+                    <img class="face front" src="imagesOptimised/roof-front.png" width="300px" height="75px">
+                    <img class="face back" src="imagesOptimised/roof-front.png" width="300px" height="75px">
+                    <img class="face left" src="imagesOptimised/roof-left.png" width="350px" height="75px">
+                    <img class="face right" src="imagesOptimised/roof-right.png" width="350px" height="75px">
+                    <img class="face top" src="imagesOptimised/roof-top.png" width="350px" height="300px">
+                </div>
+
+
+                <div class="animated-window">
+                    <canvas id="window-anim" width="300px" height="200px"></canvas>
+                </div>
+
+            </div>
+            
+
+            <!-- <div class="object window-closing">
+                <img class="face window-closing-1" src="images/window-closing-1.png" width="25px" height="100px">
+                <img class="face window-closing-2" src="images/window-closing-1.png" width="25px" height="100px">
+            </div> -->
+            
+                
+            <div class="object door">
+                <img class="face front-door" src="imagesOptimised/door-blank.png" width="250px" height="200px">
+                <img class="face front-door-1" src="imagesOptimised/door.png" width="250px" height="200px">
+            </div>
+
+            <audio id="music1" src="media/door-open.mp3"></audio>
+            <audio id="music2" src="media/door-close.mp3"></audio>
+            <audio id="music3" src="media/curtains.mp3"></audio>
+            <audio id="music4" src="media/open-basket.mp3"></audio>
+            <audio id="music5" src="media/close-basket.mp3"></audio>
+            <audio id="music6" src="media/magic.mp3"></audio>
+            <audio id="music7" src="media/chimney.mp3" loop></audio>
+            <audio id="music8" src="media/rabbit-noises.mp3" loop></audio>
+            <audio id="music9" src="media/snoring.mp3"></audio>
+            <audio id="music10" src="media/apple-drop.mp3"></audio>
+
+            <div class="object chimney">
+                <img class="face front" src="imagesOptimised/chimney-sides.png" width="50px" height="100px">
+                <img class="face back" src="imagesOptimised/chimney-sides.png" width="50px" height="100px">
+                <img class="face left" src="imagesOptimised/chimney-sides.png" width="50px" height="100px">
+                <img class="face right" src="imagesOptimised/chimney-sides.png" width="50px" height="100px">
+                <img class="face front-1" src="imagesOptimised/chimney-lip-sides.png" width="75px" height="25px">
+                <img class="face back-1" src="imagesOptimised/chimney-lip-sides.png" width="75px" height="25px">
+                <img class="face left-1" src="imagesOptimised/chimney-lip-sides.png" width="75px" height="25px">
+                <img class="face right-1" src="imagesOptimised/chimney-lip-sides.png" width="75px" height="25px">
+                <img class="face top-1" src="imagesOptimised/chimney-lip-top.png" width="75px" height="75px">
+                <img class="face bottom-1" src="imagesOptimised/chimney-lip-top.png" width="75px" height="75px">
+                <img class="face smoke" src="media/smoke.gif" width="75px" height="200px">
+
+            </div>
+
+            
+
+            <div class="object tree">
+                <img class="face front" src="imagesOptimised/tree-trunk-1.png" width="400" height="450" />
+                <img class="face leaf-3" src="media/leaf-2.gif" width="200" height="150" />
+                <img class="face leaf-1" src="media/leaf-1.gif" width="220" height="170" />
+                <img class="face leaf-2" src="media/leaf-1.gif" width="180" height="130" />
+                <img class="face leaf-4" src="media/leaf-3.gif" width="250" height="200" />
+
+                <div class="fruits">
+                    <canvas id="apples" width="350px" height="450px"></canvas>
+                </div>
+            </div>
+
+            <!-- <div class="object leaf1">
+                <img class="face leaf-1" src="media/leaf-1.gif" width="220" height="170" />
+            </div> -->
+
+
+            <div class="object fences">
+                <img class="face back" src="imagesOptimised/fences.png" width="750" height="100" />
+                <img class="face left" src="imagesOptimised/fences.png" width="750" height="100" />
+            </div>
+
+            <div class="object bush1">
+                <img class="face bush-1" src="imagesOptimised/bush-1.png" width="200" height="100" />
+            </div>
+
+            <div class="object bush2">
+                <img class="face bush-2" src="imagesOptimised/bush-2.png" width="200" height="100" />
+            </div>
+
+            <div class="object bush3">
+                <img class="face bush-3" src="imagesOptimised/bush-3.png" width="200" height="100" />
+            </div>
+
+            <div class="object bush4">
+                <img class="face bush-4" src="imagesOptimised/bush-4.png" width="200" height="100" />
+            </div>
+
+            <div class="object bush5">
+                <img class="face bush-5" src="imagesOptimised/bush-5.png" width="100" height="100" />
+            </div>
+            
+            <div class="object picnic">
+                <img class="face blanket" src="imagesOptimised/picnic-blanket.png" width="250" height="200" />
+            </div>
+
+            <div class="object food1">
+                <img class="face berry" src="imagesOptimised/berry.png" width="60" height="60" />
+            </div>
+
+            <div class="object food2">
+                <img class="face bread" src="imagesOptimised/bread.png" width="60" height="60" />
+            </div>
+
+            <div class="object food3">
+                <img class="face honey" src="imagesOptimised/honey.png" width="30" height="30" />
+            </div>
+
+
+            <div class="object basket">
+                <img class="face front" src="imagesOptimised/picnic-basket-front-back.png" width="50px" height="50px">
+                <img class="face back" src="imagesOptimised/picnic-basket-front-back.png" width="50px" height="50px">
+                <img class="face left" src="imagesOptimised/picnic-basket-left-right.png" width="75px" height="75px">
+                <img class="face right" src="imagesOptimised/picnic-basket-left-right.png" width="75px" height="75px">
+                <img class="face top1" src="imagesOptimised/picnic-basket-covers.png" width="50px" height="37.5px">
+                <img class="face top2" src="imagesOptimised/picnic-basket-covers.png" width="50px" height="37.5px">
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/@rive-app/canvas"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/scene.js"></script>
+    
+</body>
+</html>
